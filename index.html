@@ -1,278 +1,329 @@
-<!DOCTYPE html><html lang="es">
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Educación Ambiental</title><!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Educación Ambiental</title>
 
-<!-- Font Awesome for Icons -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-<!-- AOS (Animate on Scroll) -->
-<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+    <!-- AOS (Animate on Scroll) -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-    body {
-        font-family: 'Roboto', sans-serif;
-        line-height: 1.6;
-        background-color: #f4f4f4;
-        color: #333;
-    }
-
-    header {
-        background-color: #2d6a4f;
-        color: #fff;
-        padding: 20px 0;
-        text-align: center;
-    }
-
-    header h1 {
-        margin-bottom: 5px;
-        font-family: 'Poppins', sans-serif;
-    }
-
-    .header-container p {
-        font-size: 1.2em;
-    }
-
-    nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background-color: #2d6a4f;
-        color: white;
-        padding: 10px;
-        z-index: 1000;
-    }
-
-    nav ul {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-    }
-
-    nav ul li {
-        margin: 0 15px;
-    }
-
-    nav ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 1.2em;
-        padding: 5px 10px;
-    }
-
-    nav ul li a:hover {
-        background-color: #1b4d36;
-        border-radius: 5px;
-    }
-
-    h2 {
-        color: #2d6a4f;
-        margin-bottom: 10px;
-        font-family: 'Poppins', sans-serif;
-    }
-
-    section {
-        padding: 40px 20px;
-        margin: 20px;
-        background-color: rgba(255, 255, 255, 0.8);
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        animation: fadeIn 1s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        to {
-            opacity: 1;
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
         }
-    }
 
-    ul {
-        list-style-type: disc;
-        margin-left: 20px;
-    }
+        header {
+            background-color: #2d6a4f;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
 
-    ul li {
-        margin-bottom: 10px;
-    }
+        header h1 {
+            margin-bottom: 5px;
+            font-family: 'Poppins', sans-serif;
+        }
 
-    form {
-        display: flex;
-        flex-direction: column;
-    }
+        .header-container p {
+            font-size: 1.2em;
+        }
 
-    form label {
-        margin-bottom: 5px;
-    }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #2d6a4f;
+            color: white;
+            padding: 10px;
+            z-index: 1000;
+        }
 
-    form input, form textarea {
-        margin-bottom: 15px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
 
-    form input:focus, form textarea:focus {
-        border-color: #2d6a4f;
-        box-shadow: 0 0 8px rgba(45, 106, 79, 0.5);
-    }
+        nav ul li {
+            margin: 0 15px;
+        }
 
-    button {
-        padding: 12px 18px;
-        background-color: #2d6a4f;
-        color: white;
-        border: 2px solid #2d6a4f;
-        border-radius: 8px;
-        font-size: 1.1em;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 5px 10px;
+        }
 
-    button:hover {
-        background-color: white;
-        color: #2d6a4f;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
+        nav ul li a:hover {
+            background-color: #1b4d36;
+            border-radius: 5px;
+        }
 
-    footer {
-        text-align: center;
-        padding: 10px;
-        background-color: #333;
-        color: white;
-        margin-top: 40px;
-    }
+        h2 {
+            color: #2d6a4f;
+            margin-bottom: 10px;
+            font-family: 'Poppins', sans-serif;
+        }
 
-    footer p {
-        font-size: 0.9em;
-    }
+        section {
+            padding: 40px 20px;
+            margin: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
 
-    footer a {
-        color: #fff;
-        text-decoration: none;
-    }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
 
-    footer a:hover {
-        color: #2d6a4f;
-    }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
 
-    .contact {
-        margin-top: 60px;
-    }
+        ul li {
+            margin-bottom: 10px;
+        }
 
-    .carousel-container {
-        display: flex;
-        overflow-x: scroll;
-        gap: 15px;
-        margin: 30px 0;
-    }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
 
-    .carousel-container img {
-        max-height: 300px;
-        border-radius: 10px;
-        transition: transform 0.3s ease;
-    }
+        form label {
+            margin-bottom: 5px;
+        }
 
-    .carousel-container img:hover {
-        transform: scale(1.1);
-    }
+        form input, form textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-    .faq {
-        margin-top: 40px;
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 8px;
-    }
+        form input:focus, form textarea:focus {
+            border-color: #2d6a4f;
+            box-shadow: 0 0 8px rgba(45, 106, 79, 0.5);
+        }
 
-    .faq-item {
-        margin-bottom: 20px;
-    }
+        button {
+            padding: 12px 18px;
+            background-color: #2d6a4f;
+            color: white;
+            border: 2px solid #2d6a4f;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
 
-    .faq-item h3 {
-        color: #2d6a4f;
-        cursor: pointer;
-    }
+        button:hover {
+            background-color: white;
+            color: #2d6a4f;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
 
-    .faq-item p {
-        margin-top: 10px;
-        color: #555;
-    }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+        }
 
-    .grid-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 20px;
-    }
+        footer p {
+            font-size: 0.9em;
+        }
 
-    .grid-item {
-        background-color: rgba(255, 255, 255, 0.8);
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
 
-    .parallax {
-        background-image: url('https://www.example.com/imagen-de-naturaleza.jpg');
-        height: 500px;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+        footer a:hover {
+            color: #2d6a4f;
+        }
 
-    .map iframe {
-        width: 100%;
-        height: 450px;
-        border: 0;
-        border-radius: 8px;
-    }
+        .contact {
+            margin-top: 60px;
+        }
 
-    .testimonials {
-        margin-top: 40px;
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 8px;
-    }
+        /* Carrusel */
+        .carousel-container {
+            display: flex;
+            overflow-x: scroll;
+            gap: 15px;
+            margin: 30px 0;
+        }
 
-    .testimonial {
-        border-left: 5px solid #2d6a4f;
-        margin-bottom: 20px;
-        padding-left: 15px;
-    }
+        .carousel-container img {
+            max-height: 300px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
 
-    .testimonial blockquote {
-        font-style: italic;
-        color: #333;
-    }
+        .carousel-container img:hover {
+            transform: scale(1.1);
+        }
 
-    .testimonial img {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        margin-right: 15px;
-    }
+        /* FAQ */
+        .faq {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+        }
 
-    .testimonial-content {
-        display: flex;
-        align-items: center;
-    }
-</style>
+        .faq-item {
+            margin-bottom: 20px;
+        }
 
+        .faq-item h3 {
+            color: #2d6a4f;
+            cursor: pointer;
+        }
+
+        .faq-item p {
+            margin-top: 10px;
+            color: #555;
+        }
+
+        /* Grid */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Parallax */
+        .parallax {
+            background-image: url('https://www.example.com/imagen-de-naturaleza.jpg');
+            height: 500px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Map */
+        .map iframe {
+            width: 100%;
+            height: 450px;
+            border: 0;
+            border-radius: 8px;
+        }
+
+        /* Testimonios */
+        .testimonials {
+            margin-top: 40px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .testimonial {
+            border-left: 5px solid #2d6a4f;
+            margin-bottom: 20px;
+            padding-left: 15px;
+        }
+
+        .testimonial blockquote {
+            font-style: italic;
+            color: #333;
+        }
+
+        .testimonial img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .testimonial-content {
+            display: flex;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
-    <!-- Aquí empieza el contenido del body que se agregó antes -->
-    <!-- (sección de navegación, encabezado, secciones, etc.) -->
-    <!-- ... -->
-</body>
-</html>
+    <nav>
+        <ul>
+            <li><a href="#intro">Introducción</a></li>
+            <li><a href="#importance">Importancia</a></li>
+            <li><a href="#actions">Acciones</a></li>
+            <li><a href="#contact">Contacto</a></li>
+            <li><a href="#gallery">Galería</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="header-container">
+            <h1>Educación Ambiental</h1>
+            <p>Integrantes: López Martínez Jacobo</p>
+        </div>
+    </header>
+
+    <section class="intro" id="intro" data-aos="fade-up">
+        <h2>¿Qué es la educación ambiental?</h2>
+        <p>La educación ambiental es un proceso de aprendizaje que promueve la conciencia, la comprensión y la acción frente a los problemas medioambientales que enfrentamos como sociedad.</p>
+    </section>
+
+    <section class="importance" id="importance" data-aos="fade-up">
+        <h2>Importancia de la educación ambiental</h2>
+        <ul>
+            <li>Conciencia sobre el cambio climático.</li>
+            <li>Fomento de prácticas sostenibles en la vida diaria.</li>
+            <li>Protección de la biodiversidad y ecosistemas.</li>
+            <li>Reducción de la contaminación ambiental.</li>
+        </ul>
+    </section>
+
+    <section class="actions" id="actions" data-aos="fade-up">
+        <h2>Acciones que podemos tomar</h2>
+        <ul>
+            <li>Reducir el consumo de plástico.</li>
+            <li>Aprovechar la energía renovable.</li>
+            <li>Participar en programas de reciclaje.</li>
+            <li>Plantar árboles y cuidar los espacios verdes.</li>
+        </ul>
+    </section>
+
+    <section class="carousel" id="gallery" data-aos="fade-up">
+        <h2>Galería Ambiental</h2>
+        <div class="carousel-container">
+            <img src="imagen1.jpg" alt="Imagen de la naturaleza">
+            <img
